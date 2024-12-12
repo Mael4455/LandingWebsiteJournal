@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+.banner {
+  background-image:
+    linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%),
+    url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+
+.banner h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  opacity: 0.8;
+  margin: 0 0 40px;
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+  .banner h2 {
+    font-size: 24px;
+  }
+}
+<style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #3BA935, #79C871);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #2F7D31;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #BFF0B2;
+    }
+
+    .banner {
+      background-image: url('Images/ribéry.jpg'); /* Remplacez par une image de football */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .banner:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .banner h2, .banner p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h2 {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .article {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(to bottom, #E9F6E6, #F4FBF3);
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h3 {
+      color: #3BA935;
+    }
+
+    .article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .ranking h3 {
+      background-color: #3BA935;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #3BA935;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: linear-gradient(to top, #79C871, #3BA935);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 calc(30% - 20px);
+      margin: 10px;
+    }
+
+    .card img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      position: fixed;
+      width: 200px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #2F7D31;
+      color: white;
+      padding-top: 20px;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+
+    .sidebar ul li a:hover {
+      color: #BFF0B2;
+    }
+
+    /* Page content styles */
+    .page-content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-white {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Contact form styles */
+    .contact-form {
+      background: #E9F6E6;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 40px 0;
+    }
+
+    .contact-form h2 {
+      color: #3BA935;
+      text-align: center;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      background-color: #3BA935;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .contact-form button:hover {
+      background-color: #79C871;
+    }
+
+  </style>
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+.banner {
+  background-image:
+    linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%),
+    url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+
+.banner h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  opacity: 0.8;
+  margin: 0 0 40px;
+}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+  .banner h2 {
+    font-size: 24px;
+  }
+}
+<style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #3BA935, #79C871);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #2F7D31;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #BFF0B2;
+    }
+
+    .banner {
+      background-image: url('Images/ribéry.jpg'); /* Remplacez par une image de football */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+
+    .banner:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .banner h2, .banner p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h2 {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .article {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(to bottom, #E9F6E6, #F4FBF3);
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .article h3 {
+      color: #3BA935;
+    }
+
+    .article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .ranking h3 {
+      background-color: #3BA935;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #3BA935;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: linear-gradient(to top, #79C871, #3BA935);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 calc(30% - 20px);
+      margin: 10px;
+    }
+
+    .card img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      position: fixed;
+      width: 200px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #2F7D31;
+      color: white;
+      padding-top: 20px;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+      border-bottom: 1px solid #fff;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+
+    .sidebar ul li a:hover {
+      color: #BFF0B2;
+    }
+
+    /* Page content styles */
+    .page-content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card-white {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Contact form styles */
+    .contact-form {
+      background: #E9F6E6;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 40px 0;
+    }
+
+    .contact-form h2 {
+      color: #3BA935;
+      text-align: center;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    .contact-form button {
+      background-color: #3BA935;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .contact-form button:hover {
+      background-color: #79C871;
+    }
+
+  </style>
